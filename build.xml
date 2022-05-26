@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolVersion="16.0">
 	<ItemGroup>
-		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6\WebApiNet6.csproj">
-		</ProjectToBuildWeb>
-    <ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj" />
+		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6\WebApiNet6.csproj" />
+		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj" />
+		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6Lib\WebApiNet6Lib.csproj" />
+		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6LibTest\WebApiNet6LibTest.csproj" />
 	</ItemGroup>
 
 	<Target Name="web">
@@ -11,6 +12,7 @@
 	</Target>
 
   <Target Name="test">
-    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj --logger:"trx;logFileName=report1.xml"'></Exec>
+    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj'></Exec>
+    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6LibTest\WebApiNet6LibTest.csproj'></Exec>
   </Target>
 </Project>

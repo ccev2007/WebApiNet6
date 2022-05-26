@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNet6", "WebApiNet6\WebApiNet6.csproj", "{7F8FDD89-0728-46DC-A601-48969472D044}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiNet6", "WebApiNet6\WebApiNet6.csproj", "{7F8FDD89-0728-46DC-A601-48969472D044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNet6Test", "WebApiNet6Test\WebApiNet6Test.csproj", "{8B2BA563-6312-4E4C-B54D-D899DE4F97D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiNet6Test", "WebApiNet6Test\WebApiNet6Test.csproj", "{8B2BA563-6312-4E4C-B54D-D899DE4F97D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNet6Lib", "WebApiNet6Lib\WebApiNet6Lib.csproj", "{F991E77F-7041-4992-A69C-2971774613E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNet6LibTest", "WebApiNet6LibTest\WebApiNet6LibTest.csproj", "{A75EB1F2-3715-4F9F-840D-3DAB3C06A0BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8B2BA563-6312-4E4C-B54D-D899DE4F97D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B2BA563-6312-4E4C-B54D-D899DE4F97D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B2BA563-6312-4E4C-B54D-D899DE4F97D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F991E77F-7041-4992-A69C-2971774613E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F991E77F-7041-4992-A69C-2971774613E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F991E77F-7041-4992-A69C-2971774613E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F991E77F-7041-4992-A69C-2971774613E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75EB1F2-3715-4F9F-840D-3DAB3C06A0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75EB1F2-3715-4F9F-840D-3DAB3C06A0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75EB1F2-3715-4F9F-840D-3DAB3C06A0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75EB1F2-3715-4F9F-840D-3DAB3C06A0BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
