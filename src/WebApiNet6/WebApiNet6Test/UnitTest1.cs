@@ -7,5 +7,10 @@ namespace WebApiNet6Test
         {
 
         }
+        [Fact]
+        public void Test2()
+        {
+            Assert.True(false);
+        }
     }
 }

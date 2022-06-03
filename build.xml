@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolVersion="16.0">
-	<ItemGroup>
-		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6\WebApiNet6.csproj" />
-		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj" />
-		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6Lib\WebApiNet6Lib.csproj" />
-		<ProjectToBuildWeb Include="src\WebApiNet6\WebApiNet6LibTest\WebApiNet6LibTest.csproj" />
-	</ItemGroup>
-
-	<Target Name="web">
-		<Exec Command='nuget restore src\WebApiNet6'></Exec>
-		<MSBuild Projects="@(ProjectToBuildWeb)" />
-	</Target>
-
   <Target Name="test">
-    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj'></Exec>
-    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6LibTest\WebApiNet6LibTest.csproj'></Exec>
+	<PropertyGroup>
+      <ReportFileName1>$(UNIT_TEST_REPORT_FOLDER)\WebApiNet6Test\TestResult-$([System.DateTime]::Now.ToString(yyyyMMdd-hhmmss)).xml</ReportFileName1>
+      <ReportFileName2>$(UNIT_TEST_REPORT_FOLDER)\WebApiNet6LibTest\TestResult-$([System.DateTime]::Now.ToString(yyyyMMdd-hhmmss)).xml</ReportFileName2>
+    </PropertyGroup>
+    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6Test\WebApiNet6Test.csproj --logger:"trx;logFileName=$(ReportFileName1)'></Exec>
+    <Exec Command='dotnet test src\WebApiNet6\WebApiNet6LibTest\WebApiNet6LibTest.csproj --logger:"trx;logFileName=$(ReportFileName2)'></Exec>
   </Target>
 </Project>
